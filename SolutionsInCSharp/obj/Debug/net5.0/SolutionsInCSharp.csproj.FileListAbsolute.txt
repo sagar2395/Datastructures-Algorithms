@@ -1,0 +1,16 @@
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\bin\Debug\net5.0\SolutionsInCSharp.exe
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\bin\Debug\net5.0\SolutionsInCSharp.deps.json
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\bin\Debug\net5.0\SolutionsInCSharp.runtimeconfig.json
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\bin\Debug\net5.0\SolutionsInCSharp.runtimeconfig.dev.json
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\bin\Debug\net5.0\SolutionsInCSharp.dll
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\bin\Debug\net5.0\ref\SolutionsInCSharp.dll
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\bin\Debug\net5.0\SolutionsInCSharp.pdb
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\SolutionsInCSharp.csprojAssemblyReference.cache
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\SolutionsInCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\SolutionsInCSharp.AssemblyInfoInputs.cache
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\SolutionsInCSharp.AssemblyInfo.cs
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\SolutionsInCSharp.csproj.CoreCompileInputs.cache
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\SolutionsInCSharp.dll
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\ref\SolutionsInCSharp.dll
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\SolutionsInCSharp.pdb
+C:\Users\chhabsag\Desktop\Personal Data\Datastructures and Algorithms\Problems and Solutions\Datastructures-Algorithms\SolutionsInCSharp\obj\Debug\net5.0\SolutionsInCSharp.genruntimeconfig.cache

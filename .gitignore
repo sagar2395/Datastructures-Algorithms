@@ -1,2 +1,2 @@
-SolutionsInCSharp/bin
-SolutionsInCSharp/obj
+SolutionsInCSharp/bin/*
+SolutionsInCSharp/obj/*

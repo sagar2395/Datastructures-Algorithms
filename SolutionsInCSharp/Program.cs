@@ -11,11 +11,6 @@ namespace SolutionsInCSharp
             Console.WriteLine("Sagar chhabra");
 
 
-            Solution rm = new Solution();
-            int[] nums = new int[]{5,6,8,8,9,9,9,9,10};
-            Console.WriteLine(rm.RemoveDuplicates(nums));
-
-
         }
     }
 }

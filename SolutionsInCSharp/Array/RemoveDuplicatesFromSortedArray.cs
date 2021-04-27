@@ -6,7 +6,7 @@ using System.Collections.Generic;
 // Do not allocate extra space for another array, you must do this by modifying
 // the input array in-place with O(1) extra memory.
 namespace SolutionsInCSharp{
-    public class Solution{
+    public class Solution01{
 
         public int RemoveDuplicates(int[] nums){
             Dictionary<int,int> dict = new Dictionary<int,int>();
@@ -21,5 +21,6 @@ namespace SolutionsInCSharp{
             return list.Count;
         }
 
+        
     }
 }

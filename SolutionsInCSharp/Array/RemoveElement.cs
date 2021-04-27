@@ -6,18 +6,18 @@ using System.Collections.Generic;
 // Do not allocate extra space for another array, you must do this by modifying
 // the input array in-place with O(1) extra memory.
 namespace SolutionsInCSharp{
-    public class A{
+    public class Solution02{
         public int RemoveElement(int[] nums, int val){
-            int j = 0;
-            int i = 0;
-            while(i + j < nums.Length){
-                if(nums[i] == val){
-                    j++;
+            if(nums.Length == 0 || nums == null) return 0;
+            
+            var index = 0;
+            for(int i = 0; i < nums.Length ; i++){
+                if(nums[i] != val){
+                    nums[index] = nums[i];
+                    index++;
                 }
-                nums[i] = nums[i+j];
-                i++;
             }
-            return nums.Length - j;
+            return index;
         }
     }
 }

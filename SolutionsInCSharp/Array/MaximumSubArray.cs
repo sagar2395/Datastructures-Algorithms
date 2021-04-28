@@ -10,7 +10,7 @@ namespace SolutionsInCSharp
 
             var localMax = nums[0];
             var globalMax = nums[0];
-            for(int i= 0 ; i < nums.Length ; i++)
+            for(int i= 1 ; i < nums.Length ; i++)
             {
                 localMax = findMax(nums[i] , nums[i] + localMax);
                 globalMax = findMax(localMax , globalMax);

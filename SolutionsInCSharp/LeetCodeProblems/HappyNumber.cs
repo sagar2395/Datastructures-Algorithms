@@ -6,36 +6,48 @@ namespace SolutionsInCSharp
     {
         public bool IsHappy(int n)
         {
-            int sum = 0;
-            while(sum / 10 != 0){
-                int[] numArray = splitNumber(sum);
+            int sum = n;
+            HashSet<int> set = new HashSet<int>();
+            bool flag = false;
+
+            while(!flag){
+                List<int> numArray = splitNumber(sum);
+                
                 sum = 0;
 
-                for(int i = 0 ; i < numArray.Length ; i++){
+                for(int i = 0 ; i < numArray.Count ; i++){
                     sum += numArray[i] * numArray[i];
                 }
 
+                if(sum == 1) flag = true;
+                
+                if(!set.Contains(sum)){
+                    set.Add(sum);
+                }
+                else{
+                    flag = true;
+                }
             }
-
+             
             return sum == 1 ? true : false;
         }
 
-        public int[] splitNumber(int n)
+        public List<int> splitNumber(int n)
         {
             int multiplier = 10;
-            int[] numArray = new int[] { };
-            int i = 0;
+            List<int> numList = new List<int>();
             int remaining = n;
             do
             {
                 int num = remaining % multiplier;
-                numArray[i] = num;
-                i++;
+                numList.Add(num);
 
                 remaining = remaining / multiplier;
 
             } while (remaining / multiplier != 0);
-            return numArray;
+            
+            numList.Add(remaining);
+            return numList;
         }
     }
 }

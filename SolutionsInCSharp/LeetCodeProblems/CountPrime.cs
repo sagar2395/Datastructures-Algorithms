@@ -4,7 +4,6 @@ namespace SolutionsInCSharp
 {
     public class Solution11
     {
-
         Dictionary<int, int> dict = new Dictionary<int, int>();
         public int CountPrimes(int n)
         {
@@ -16,7 +15,7 @@ namespace SolutionsInCSharp
                 for (int j = 2; j < i; j++)
                 {
 
-                    int remainder = CheckRemainder(n, j);
+                    int remainder = CheckRemainder(i, j);
 
                     if (remainder == 0)
                     {
@@ -26,13 +25,13 @@ namespace SolutionsInCSharp
                 }
 
                 if (isPrime) count++;
-
+                dict.Clear();
             }
 
             return count;
         }
 
-        public int CheckRemainder(int n, int j)
+        public int CheckRemainder(int i, int j)
         {
             if (dict.ContainsKey(j))
             {
@@ -40,7 +39,7 @@ namespace SolutionsInCSharp
             }
             else
             {
-                dict[j] = n % j;
+                dict[j] = i % j;
                 return dict[j];
             }
 

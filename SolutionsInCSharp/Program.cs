@@ -14,11 +14,9 @@ namespace SolutionsInCSharp
 
             Console.WriteLine(a - '3');
 
-            char c = 'f';
 
-            int b = c - '0';
-
-            Console.WriteLine(b);
+            int k = 5;
+            Console.WriteLine(-k);
 
 
         }

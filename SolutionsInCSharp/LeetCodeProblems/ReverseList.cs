@@ -2,7 +2,7 @@ namespace SolutionsInCSharp
 {
     public class Solution30
     {
-        public ListNode reverseList(ListNode head)
+        public ListNode ReverseList(ListNode head)
         {
             ListNode current = head;
             ListNode previous = null;

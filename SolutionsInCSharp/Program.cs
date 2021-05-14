@@ -7,9 +7,9 @@ namespace SolutionsInCSharp
     {
         static void Main(string[] args)
         {
-            Solution23 myAtoi = new Solution23();
+            Solution27 s = new Solution27();
 
-            myAtoi.MyAtoi("   -42");
+            s.ShortestPalindrome("aacecaaa");
 
 
         }

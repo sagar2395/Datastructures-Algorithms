@@ -7,9 +7,9 @@ namespace SolutionsInCSharp
     {
         static void Main(string[] args)
         {
-            Solution27 s = new Solution27();
+            Solution33 s = new Solution33();
 
-            s.ShortestPalindrome("aacecaaa");
+            s.FindErrorNums(new int[]{1,2,2,4});
 
 
         }

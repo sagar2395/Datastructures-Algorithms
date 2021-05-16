@@ -7,9 +7,9 @@ namespace SolutionsInCSharp
     {
         static void Main(string[] args)
         {
-            Solution33 s = new Solution33();
+            Solution36 s = new Solution36();
 
-            s.FindErrorNums(new int[]{1,2,2,4});
+            s.IsPathCrossing("NESWW");
 
 
         }

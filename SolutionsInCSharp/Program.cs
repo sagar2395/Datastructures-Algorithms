@@ -7,9 +7,9 @@ namespace SolutionsInCSharp
     {
         static void Main(string[] args)
         {
-            Solution38 s = new Solution38();
+            Solution39 s = new Solution39();
 
-            s.Jump(new int[]{2,3,1,1,4});
+            s.ReadBinaryWatch(2);
 
 
         }

@@ -7,9 +7,7 @@ namespace SolutionsInCSharp
     {
         static void Main(string[] args)
         {
-            Solution39 s = new Solution39();
 
-            s.ReadBinaryWatch(2);
 
 
         }

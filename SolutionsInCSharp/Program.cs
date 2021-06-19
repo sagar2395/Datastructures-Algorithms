@@ -8,19 +8,10 @@ namespace SolutionsInCSharp
     {
         static void Main(string[] args)
         {
-            Arrays arr = new Arrays(10);
+            Solution45 rs = new Solution45();
 
-            arr.Add(5);
-            arr.Add(5);
-            arr.Add(5);
-            arr.Add(5);
-            arr.Add(5);
-            arr.Add(5);
-            arr.Add(5);
-
-            arr.PrintArray();
+            Console.WriteLine(rs.ReverseString("Hi my name is Sagar Chhabra"));
         
-
         }
     }
 }

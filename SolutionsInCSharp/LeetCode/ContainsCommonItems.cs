@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace SolutionsInCSharp{
     public class Solution40{
@@ -7,7 +8,9 @@ namespace SolutionsInCSharp{
             HashSet<int> set = new HashSet<int>();
 
             foreach(var val in arr1){
-                set.Add(val);
+                if(!set.Contains(val)){
+                    set.Add(val);
+                }
             }
 
             foreach(var val in arr2){

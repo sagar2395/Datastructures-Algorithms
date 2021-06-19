@@ -8,15 +8,17 @@ namespace SolutionsInCSharp
     {
         static void Main(string[] args)
         {
-            int[] a = new int[]{5,10,12,2,6,45,78,85,1,0,5,52,78};
+            Arrays arr = new Arrays(10);
 
-            double b = a.Where(x => x % 2 == 0).Select(x => x * 100).OrderBy(x => x).Skip(2).Take(3).Min();
+            arr.Add(5);
+            arr.Add(5);
+            arr.Add(5);
+            arr.Add(5);
+            arr.Add(5);
+            arr.Add(5);
+            arr.Add(5);
 
-            //foreach(var i in b){
-                Console.WriteLine(b);
-            //}
-
-            Console.WriteLine("End of Program");
+            arr.PrintArray();
         
 
         }

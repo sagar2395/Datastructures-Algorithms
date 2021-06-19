@@ -1,10 +1,12 @@
+using System;
+
 namespace SolutionsInCSharp
 {
-    public class Array
+    public class Arrays
     {
         int[] arr;
         int length = 0;
-        public Array(int n){
+        public Arrays(int n){
             arr = new int[n];
         }
 
@@ -20,6 +22,15 @@ namespace SolutionsInCSharp
         public void Remove(){
             arr[length - 1] = 0;
             length--;
+        }
+
+        public void PrintArray(){
+
+            Console.Write("[");
+            foreach(var val in arr){
+                Console.Write(val + " ");
+            }
+            Console.Write("]");
         }
     }
 }

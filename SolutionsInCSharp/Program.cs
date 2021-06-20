@@ -8,10 +8,16 @@ namespace SolutionsInCSharp
     {
         static void Main(string[] args)
         {
-            Solution45 rs = new Solution45();
+            Solution25 rs = new Solution25();
 
-            Console.WriteLine(rs.ReverseString3("Hi my name is Sagar Chhabra"));
+            int[] a = new int[]{5 , 13, 18, 24, 36};
+            int[] b = new int[]{8 , 12, 14, 28, 39, 53};
         
+            int[] c = rs.MergeSortedArrays(a , b);
+            
+            foreach(var val in c){
+                Console.Write(val + " ");
+            }
         }
     }
 }

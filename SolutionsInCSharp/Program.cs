@@ -10,8 +10,8 @@ namespace SolutionsInCSharp
         {
             Solution46 rs = new Solution46();
 
-            Console.WriteLine(rs.BackspaceCompare("Hello#####" , ""));
-            
+            Console.WriteLine(rs.BackspaceCompare("y#fo##f" , "y#f#o##f"));
+
         }
     }
 }

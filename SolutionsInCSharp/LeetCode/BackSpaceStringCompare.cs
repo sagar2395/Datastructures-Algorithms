@@ -15,8 +15,10 @@ namespace SolutionsInCSharp{
             StringBuilder s = new StringBuilder();
 
             foreach(var a in value){
-                if(a == '#' && s.Length != 0){
-                    s.Remove(s.Length - 1, 1);
+                if(a == '#'){
+                    if(s.Length != 0){
+                        s.Remove(s.Length - 1, 1);
+                    }
                 }
                 else{
                     s.Append(a);

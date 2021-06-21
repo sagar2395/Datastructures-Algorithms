@@ -15,6 +15,54 @@ namespace SolutionsInCSharp
             int i = 0, j = 0, k = 0;
             int[] newArr = new int[arr1.Length + arr2.Length];
 
+            if(arr1.Length == 0){
+                return arr2;
+            }
+
+            if(arr2.Length == 0){
+                return arr1;
+            }
+
+            while (i < arr1.Length && j < arr2.Length)
+            {
+                if (arr1[i] < arr2[j])
+                {
+                    newArr[k] = arr1[i];
+                    i++;
+                }
+                else
+                {
+                    newArr[k] = arr2[j];
+                    j++;
+                }
+                k++;
+            }
+
+            if(i == arr1.Length){
+                while(j < arr2.Length){
+                    newArr[k] = arr2[j];
+                    j++;
+                    k++;
+                }
+            }
+            else{
+                while(i < arr1.Length){
+                    newArr[k] = arr2[i];
+                    i++;
+                    k++;
+                }
+            }
+
+            return newArr;
+        }
+
+        public int[] MergeSortedArrays2(int[] arr1, int[] arr2)
+        {
+            int i = 0, j = 0, k = 0;
+            int arrayItem1 = arr1[0];
+            int arrayItem2 = arr2[0];
+            int[] newArr = new int[arr1.Length + arr2.Length];
+
             while (i < arr1.Length && j < arr2.Length)
             {
                 if (arr1[i] < arr2[j])

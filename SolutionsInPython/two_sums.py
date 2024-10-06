@@ -20,5 +20,6 @@ def twoSumsHashmap(nums, target):
                 
                 
 nums = [3,2,4] 
+nums2 = [6, 8, 9]
 target = 6
 print(twoSumsHashmap(nums, target))

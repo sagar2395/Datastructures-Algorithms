@@ -30,3 +30,22 @@ class BST():
                         current_node = current_node.left
             self.number_of_nodes += 1
             return
+        
+    def BFS(self):
+        current_node = self.root
+        if current_node is None:
+            return "tree is empty"
+        else:
+            BFS_result = []
+            queue = []
+            queue.append(current_node)
+            
+            while(len(queue) > 0):
+                current_node = queue.pop()
+                BFS_result.append(current_node.data)
+                if current_node.left:
+                    queue.append(current_node.left)
+                if current_node.right:
+                    queue.append(current_node.right)
+            return BFS_result
+        

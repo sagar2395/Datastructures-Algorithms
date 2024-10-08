@@ -1,13 +1,13 @@
-def longest_palindrome(str):
+def longest_palindrome(s):
     res = ""
     resLength = 0
     
-    for i in range(len(str)):
+    for i in range(len(s)):
         l, r = i, i
         # Odd length
-        while l >= 0 and r < len(str) and str[l] == str[r]:
+        while l >= 0 and r < len(s) and s[l] == s[r]:
             if(r - l + 1) > resLength:
-                res = str[l:r+1]
+                res = s[l:r+1]
                 resLength = r - l + 1
             l -= 1
             r += 1
@@ -15,9 +15,9 @@ def longest_palindrome(str):
         # Even length
         l, r = i, i+1
         
-        while l >= 0 and r <len(str) and str[l] == str[r]:
+        while l >= 0 and r <len(s) and s[l] == s[r]:
             if(r - l + 1) > resLength:
-                res = str[l:r+1]
+                res = s[l:r+1]
                 resLength = r - l + 1
                 
             l -= 1
@@ -25,5 +25,5 @@ def longest_palindrome(str):
             
     return res
             
-str = "babad"
-print(longest_palindrome(str))
+s = "babad"
+print(longest_palindrome(s))

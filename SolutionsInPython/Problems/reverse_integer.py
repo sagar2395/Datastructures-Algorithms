@@ -7,6 +7,9 @@ def reverse_integer(x):
         reversed = reversed * 10 + x % 10
         x //= 10
         
+        if reversed > 2**31 -1:
+            return 0
+        
     return reversed if not negative else -reversed
 
 num = 5320

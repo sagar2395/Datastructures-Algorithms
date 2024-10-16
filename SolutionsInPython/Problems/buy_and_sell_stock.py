@@ -24,6 +24,8 @@ def max_profit_optimised(prices):
             l = r
             
         r += 1
+        
+    return maxProfit
     
 
 nums = [7,1,5,3,6,4]

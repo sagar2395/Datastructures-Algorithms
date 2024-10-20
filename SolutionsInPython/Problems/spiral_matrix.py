@@ -1,5 +1,4 @@
 def spiral_matrix(matrix):
-    print(arr)
     ret = []
     while matrix:
         

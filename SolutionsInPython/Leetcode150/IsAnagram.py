@@ -24,3 +24,5 @@ class Solution(object):
                 return False 
             else: 
                 dict[a] -= 1
+                
+        return True

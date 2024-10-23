@@ -5,24 +5,26 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
+    def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         res = []
         q = deque([root])
+        count = 0
         while q:
-            rightSide = None
-            sum = 0
-            n = len(q)
+            row = []
 
             for i in range(len(q)):
                 node = q.popleft()
                 if node:
-                    sum+= node.val
+                    row.append(node.val)
                     if node.left:
                         q.append(node.left)
                     if node.right:
                         q.append(node.right)
 
-            
-            res.append(sum/n)
+            row = row[::-1] if count % 2 else row
+            if row != []:
+                res.append(row)
+        
+            count += 1
 
         return res

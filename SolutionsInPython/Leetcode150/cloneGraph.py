@@ -1,30 +1,29 @@
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val = 0, neighbors = None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+"""
+
+from typing import Optional
 class Solution:
-    def numIslands(self, grid: List[List[str]]) -> int:
-        if not grid:
-            return 0
+    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        if not node:
+            return
+            
+        oldToNew = {}
 
-        rows, cols = len(grid), len(grid[0])
-        visit = set()
-        islands = 0 
+        def clone(node):
+            if node in oldToNew:
+                return oldToNew[node]
 
-        def bfs(r, c):
-            q = deque()
-            visit.add((r, c))
-            q.append((r, c))
+            copy = Node(node.val)
+            oldToNew[node] = copy
+            for neighbor in node.neighbors:
+                copy.neighbors.append(clone(neighbor))
 
-            while q:
-                row, col = q.popleft()
-                directions = [[1 ,0], [-1, 0], [0, 1], [0, -1]]
-                for dr, dc in directions:
-                    r, c = row + dr, col + dc
-                    if (r in range(rows)) and (c in range(cols)) and (grid[r][c] == "1") and ((r, c) not in visit):
-                        q.append((r, c))
-                        visit.add((r, c))
+            return copy
 
-        for r in range(rows):
-            for c in range(cols):
-                if grid[r][c] == "1" and (r, c) not in visit:
-                    bfs(r, c)
-                    islands += 1
+        return clone(node)
         
-        return islands

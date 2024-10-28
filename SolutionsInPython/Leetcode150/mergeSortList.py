@@ -36,6 +36,7 @@ class Solution:
                 else:
                     temp.next = right
                     right = right.next
+                temp = temp.next
             
             if left:
                 temp.next = left

@@ -12,6 +12,7 @@
 # Output: false
 # Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
 
+from typing import List
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         goal =len(nums) - 1

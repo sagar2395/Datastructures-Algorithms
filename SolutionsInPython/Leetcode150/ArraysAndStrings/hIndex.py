@@ -11,6 +11,7 @@
 # Input: citations = [1,3,1]
 # Output: 1
 
+from typing import List
 class Solution(object):
     # unoptimized
     # Time complexity - O(n2)

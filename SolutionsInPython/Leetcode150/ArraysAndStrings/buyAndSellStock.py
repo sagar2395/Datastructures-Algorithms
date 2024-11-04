@@ -28,3 +28,17 @@ class Solution:
 
             r += 1 
         return maxProfit
+    
+    def buy_sell_stock(nums):
+        i = 0
+        j = 1
+        stocks_difference = 0 
+        
+        for i in range(len(nums) - 1):
+            for j in range(i+1, len(nums) - 1):
+                temp = nums[j] - nums[i]
+            
+                if temp > stocks_difference:
+                    stocks_difference =  temp
+    
+        return stocks_difference 

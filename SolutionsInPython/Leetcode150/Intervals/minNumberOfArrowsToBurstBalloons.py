@@ -19,6 +19,7 @@
 # Explanation: The balloons can be burst by 2 arrows:
 # - Shoot an arrow at x = 2, bursting the balloons [1,2] and [2,3].
 # - Shoot an arrow at x = 4, bursting the balloons [3,4] and [4,5].
+from typing import List
 
 class Solution:
     def findMinArrowShots(self, points: List[List[int]]) -> int:

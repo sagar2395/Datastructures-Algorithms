@@ -9,7 +9,7 @@
 # Input: root = [1]
 # Output: ["1"]
 
-from typing import Optional
+from typing import Optional, List
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):

@@ -24,20 +24,29 @@ class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
 
         res = []
+        path = []
         
-        def backtrack(i, comb, total):
+        def backtrack(i, total):
+            print("backtrack(" + str(i) + ", " + str(total) + ")")
+            print("path value: " + str(path))
             if total == target:
-                res.append(comb[:])
+                print("Found target. Adding " + str(path))
+                res.append(path[:])
                 return
 
             if total > target or i >= len(candidates):
                 return
 
-            comb.append(candidates[i])
-            backtrack(i, comb, total + candidates[i])
-            comb.pop()
-            backtrack(i + 1, comb, total)
+            path.append(candidates[i])
+            backtrack(i, total + candidates[i])
+            path.pop()
+            backtrack(i + 1, total)
 
             return res
 
-        return backtrack(0, [], 0)
+        return backtrack(0, 0)
+    
+a = Solution()
+candidates = [2,3,6,7]
+target = 8
+print(a.combinationSum(candidates, target))

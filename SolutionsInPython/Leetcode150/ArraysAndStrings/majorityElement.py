@@ -40,7 +40,7 @@ class Solution:
     
     # Same complexity as above but this solution is more concise
     
-    def majorityElement(self, nums: List[int]) -> int:
+    def majorityElement1(self, nums: List[int]) -> int:
             hash = {}
             res = majority = 0
 
@@ -51,3 +51,14 @@ class Solution:
                     majority = hash[n]
 
             return res
+        
+    def majorityElement2(self, nums: List[int]) -> int:
+        res, count = 0, 0
+
+        for n in nums:
+            if count == 0:
+                res = n
+
+            count += 1 if n == res else  -1
+
+        return res

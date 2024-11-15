@@ -46,6 +46,28 @@ class Solution:
 
         return backtrack(0, 0)
     
+    def combinationSum1(self, candidates: List[int], target: int) -> List[List[int]]:
+
+        result = []
+        path = []
+        visited = set()
+        
+        def backtrack(i, total):
+            if total == target:
+                result.append(path[:])
+                return
+
+            if total > target:
+                return
+            
+            for j in range(i, len(candidates)):
+                path.append(candidates[j])
+                backtrack(j, candidates[j] + total)
+                path.pop()
+
+        backtrack(0, 0)
+        return result
+    
 a = Solution()
 candidates = [2,3,6,7]
 target = 8

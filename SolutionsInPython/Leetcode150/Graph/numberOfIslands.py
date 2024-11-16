@@ -1,3 +1,27 @@
+# 200. Number of Islands
+# https://leetcode.com/problems/number-of-islands/description/?envType=study-plan-v2&envId=top-interview-150
+
+# Example 1:
+# Input: grid = [
+#   ["1","1","1","1","0"],
+#   ["1","1","0","1","0"],
+#   ["1","1","0","0","0"],
+#   ["0","0","0","0","0"]
+# ]
+# Output: 1
+
+# Example 2:
+# Input: grid = [
+#   ["1","1","0","0","0"],
+#   ["1","1","0","0","0"],
+#   ["0","0","1","0","0"],
+#   ["0","0","0","1","1"]
+# ]
+# Output: 3
+
+from typing import List
+from collections import deque
+
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         if not grid:

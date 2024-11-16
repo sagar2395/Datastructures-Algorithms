@@ -1,3 +1,18 @@
+# 222. Count Complete Tree Nodes
+# https://leetcode.com/problems/count-complete-tree-nodes/description/?envType=study-plan-v2&envId=top-interview-150
+
+# Example 1:
+# Input: root = [1,2,3,4,5,6]
+# Output: 6
+
+# Example 2:
+# Input: root = []
+# Output: 0
+
+# Example 3:
+# Input: root = [1]
+# Output: 1
+
 from typing import Optional
 # Definition for a binary tree node.
 class TreeNode:

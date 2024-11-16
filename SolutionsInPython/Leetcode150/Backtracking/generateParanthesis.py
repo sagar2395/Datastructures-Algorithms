@@ -23,14 +23,21 @@ class Solution:
                 res.append("".join(stack))
 
             if openN < n:
+                print("Inserting ( to path")
                 stack.append("(")
                 backtrack(openN + 1, closedN)
-                stack.pop()
+                k = stack.pop()
+                print("Removing last bracket from stack " + k)
 
             if closedN < openN:
+                print("Inserting ) to path")
                 stack.append(")")
                 backtrack(openN, closedN + 1)
-                stack.pop()
+                k = stack.pop()
+                print("Removing last bracket from stack " + k)
 
         backtrack(0, 0)
         return res
+    
+a = Solution()
+print(a.generateParenthesis(3))

@@ -22,10 +22,8 @@ class Solution(object):
     
     
     def buildTree(self, inorder: List[int], postorder: List[int], count: int) -> Optional[TreeNode]:
-        print("-----Start: " + str(count) +"------------")
-        print("Inorder: "+ str(inorder))
-        print("Postorder: " + str(postorder))
-        print("buildTree({inorder})")
+        print("buildTree({0}, {1})".format(inorder, postorder))
+        
         tree = Tree()
         
         if not inorder:

@@ -24,13 +24,23 @@ class TreeNode:
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        print("lowestCommonAncestor({0}, {1}, {2})".format(root, p, q))
+        
         if not root or root == p or root == q:
             return root
 
         l = self.lowestCommonAncestor(root.left, p, q)
         r = self.lowestCommonAncestor(root.right, p, q)
 
+        print("Result of l inside lowestCommonAncestor({0}, {1}, {2}): {3}".format(root, p, q, l.val))
+        print("Result of r inside lowestCommonAncestor({0}, {1}, {2}): {3}".format(root, p, q, r.val))
+        
         if l and r:
             return root
 
         return l or r
+    
+a = Solution()
+
+
+a.lowestCommonAncestor()

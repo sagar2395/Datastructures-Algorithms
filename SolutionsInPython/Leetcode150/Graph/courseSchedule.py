@@ -27,7 +27,7 @@ class Solution:
             if crs in visitSet:
                 return False
             if preMap[crs] == []:
-                return True
+                return True 
 
             visitSet.add(crs)
             for pre in preMap[crs]:

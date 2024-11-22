@@ -72,5 +72,22 @@ class Solution:
                     cache[i][j] = triangle[i][j] + min(cache[i+1][j], cache[i+1][j+1])
 
         return cache[0][0]
+    
+    # Optimiztion of bottom up approach
+    def minimumTotal(self, triangle: List[List[int]]) -> int:
+        result = float("inf")
+        cache = []
+
+        for r in range(len(triangle)):
+            cache.append([float("inf")] * len(triangle[r]))
+
+        for i in range(len(triangle[-1])):
+            cache[len(triangle[-1]) - 1][i] = triangle[len(triangle[-1]) - 1][i]
+
+        for i in range(len(triangle) -2, -1, -1):
+            for j in range(len(triangle[i]) -1, -1, -1):
+                cache[i][j] = triangle[i][j] + min(cache[i+1][j], cache[i+1][j+1])
+
+        return cache[0][0]
 
         

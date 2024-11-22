@@ -21,9 +21,11 @@ class Solution:
         board= [["."] * n for i in range(n)]
 
         def backtrack(r):
+            print("backtrack({0})".format(r))
             if r == n:
                 copy = ["".join(row) for row in board]
                 res.append(copy)
+                print(copy)
                 return
 
             for c in range(n):
@@ -34,13 +36,24 @@ class Solution:
                 posDiag.add(r + c)
                 negDiag.add(r - c)
                 board[r][c] = "Q"
-
+                print("before col: {0}".format(col))
+                print("before posDiag: {0}".format(posDiag))
+                print("before negDiag: {0}".format(negDiag))
                 backtrack(r + 1)
 
                 col.remove(c)
                 posDiag.remove(r + c)
                 negDiag.remove(r - c)
                 board[r][c] = "."
+                print("after col: {0}".format(col))
+                print("after posDiag: {0}".format(posDiag))
+                print("after negDiag: {0}".format(negDiag))
+                
+            print("Board result from backtrack({0}): {1}".format(r, board))
 
         backtrack(0)
+        print("result: {0}".format(res))
         return res
+
+a = Solution()
+print(a.solveNQueens(4))

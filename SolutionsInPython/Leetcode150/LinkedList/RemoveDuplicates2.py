@@ -33,6 +33,22 @@ class Solution:
                 temp = curr.next
 
         return dummy.next
+    
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode(0, head)
+        cur = head
+        prev = dummy
+        while cur and cur.next:
+            if cur.val != cur.next.val:
+                prev = cur
+                cur = cur.next
+            else:
+                while cur.next and cur.val == cur.next.val:
+                    cur = cur.next
+                prev.next = cur.next
+                cur = prev.next
+        
+        return dummy.next
 
 
         

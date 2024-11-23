@@ -1,3 +1,7 @@
+# Solution incomplete . Not passing all test cases. Prefix Sum method should be used.
+
+from typing import List 
+
 class NumMatrix:
 
     def __init__(self, matrix: List[List[int]]):

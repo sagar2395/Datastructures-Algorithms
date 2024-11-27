@@ -33,8 +33,31 @@ class Solution(object):
             return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
 
         return False
+    
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        
+        if not q and not p:
+            return True
+
+        if not q or not p:
+            return False
+
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right) and p.val == q.val
 
 
+    # Another way of writing the same problem
+    def isSameTree(self, p, q):
+        # If both nodes are None, they are identical
+        if p is None and q is None:
+            return True
+        # If only one of the nodes is None, they are not identical
+        if p is None or q is None:
+            return False
+        # Check if values are equal and recursively check left and right subtrees
+        if p.val == q.val:
+            return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        # Values are not equal, they are not identical
+        return False
 
 
         

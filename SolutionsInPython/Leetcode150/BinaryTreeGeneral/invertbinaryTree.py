@@ -23,6 +23,8 @@ class TreeNode(object):
         self.right = right
         
 class Solution(object):
+    
+    # Iterative approach
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if root is None:
             return
@@ -42,6 +44,18 @@ class Solution(object):
                 node.left, node.right = node.right, None
             elif node.right is None:
                 node.right, node.left = node.left, None
+        return root
+    
+    # Recursive approach
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return
+
+        root.left, root.right = root.right, root.left
+
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+
         return root
 
         

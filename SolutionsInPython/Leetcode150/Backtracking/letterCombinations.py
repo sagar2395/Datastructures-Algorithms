@@ -73,3 +73,33 @@ class Solution:
             backtrack(0, "")
 
         return results
+    
+    # Solving without backtracking using for loop
+    def letterCombinations(self, digits: str) -> List[str]:
+        
+        result = []
+        path = []
+
+        digitToChar = {
+            "2": "abc",
+            "3": "def",
+            "4": "ghi",
+            "5": "jkl",
+            "6": "mno",
+            "7": "pqrs",
+            "8": "tuv",
+            "9": "wxyz"
+        }
+
+        if not digits:
+            return []
+
+        result = [""]
+        for digit in digits:
+            temp = []
+            for res in result:
+                for j in digitToChar[digit]:
+                    temp.append(res + j)
+            result = temp
+
+        return result

@@ -20,6 +20,7 @@
 # Explanation: Since the tree is empty, there are no root-to-leaf paths.
 
 from typing import Optional
+from collections import deque
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -28,7 +29,10 @@ class TreeNode:
         self.right = right
         
 class Solution:
+    
+    # DFS approach
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        
         def dfs(node, curSum):
             if not node:
                 return False
@@ -40,3 +44,50 @@ class Solution:
             return (dfs(node.left, curSum) or dfs(node.right, curSum))
 
         return dfs(root, 0)
+    
+    # Backtracking approach
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+
+        pathSum = 0
+
+        def backtrack(head):
+
+            if not head:
+                return False
+            
+            nonlocal pathSum
+            pathSum += head.val
+
+            if not head.left and not head.right and pathSum == targetSum:
+                return True
+            
+            if backtrack(head.left):
+                return True
+            if backtrack(head.right):
+                return True
+
+            pathSum -= head.val
+
+            return False
+
+        return backtrack(root)
+    
+    # BFS approach
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        
+        if root is None:
+            return False
+
+        q = deque()
+        q.append((root, 0))
+
+        while q:
+            current, s = q.popleft() 
+            if current.left:
+                q.append((current.left, s + current.val))
+            if current.right:
+                q.append((current.right, s + current.val))
+            if s + current.val == targetSum and not current.left and not current.right:
+                return True
+
+        return False

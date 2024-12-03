@@ -27,3 +27,15 @@ class Solution(object):
         if not left or not right:
             return False
         return (left.val == right.val and self.dfs(left.left, right.right) and self.dfs(left.right, right.left))
+    
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        
+        def isSame(l, r):
+            if not l and not r:
+                return True
+            if not l or not r:
+                return False
+
+            return isSame(l.left, r.right) and isSame(l.right, r.left) and l.val == r.val
+
+        return isSame(root.left, root.right)

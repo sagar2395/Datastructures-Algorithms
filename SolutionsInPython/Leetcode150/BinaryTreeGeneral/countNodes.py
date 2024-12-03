@@ -14,6 +14,7 @@
 # Output: 1
 
 from typing import Optional
+from collections import deque
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -33,3 +34,19 @@ class Solution:
             sum += dfs(node.left, sum) + dfs(node.right, sum)
             return sum
         return dfs(root, 1)
+    
+    def countNodes(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+            
+        q = deque([root])
+        count = 0
+        while q:
+            node = q.popleft()
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+            count += 1
+
+        return count

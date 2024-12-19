@@ -41,3 +41,22 @@ class Solution:
             return dfs(cur.left, num) + dfs(cur.right, num)
 
         return dfs(root, 0)
+    
+    # Another approach to solve above problem
+    def sumNumbers(self, root: Optional[TreeNode]) -> int:
+        result = 0
+
+        def dfs(root, curSum):
+            if not root:
+                return
+            
+            curSum = (curSum * 10) + root.val
+            if not root.left and not root.right:
+                nonlocal result
+                result += curSum
+
+            dfs(root.left, curSum)
+            dfs(root.right, curSum)
+
+        dfs(root, 0)
+        return result
